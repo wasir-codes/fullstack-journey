@@ -25,6 +25,9 @@ while True:
         break
     elif choice == "1":
         task = input("Enter task name: ")
+        if not task.strip():
+            print("Task name cannot be empty.")
+            continue
         tasks.append({"task": task, "done": False})
         save_tasks(tasks)
     elif choice == "2":
@@ -37,8 +40,12 @@ while True:
     elif choice == "3":
         if not tasks:
             print("No tasks to delete")
-        else:    
-            delete = int(input("Which task to delete? Choose number: "))
+        else:
+            try:    
+                delete = int(input("Which task to delete? Choose number: "))
+            except ValueError:
+                print("Please enter a valid number.")
+                continue    
             if 1 <= delete <= len(tasks):
                 tasks.pop(delete - 1)
                 save_tasks(tasks)
@@ -48,7 +55,11 @@ while True:
         if not tasks:
             print("No tasks to show")
         else:
-            task_no = int(input("Which task to mark? Choose number: "))
+            try:
+                task_no = int(input("Which task to mark? Choose number: "))
+            except ValueError:
+                print("Please enter a valid number.")
+                continue
             if 1 <= task_no <= len(tasks):
                 tasks[task_no - 1]["done"] = not tasks[task_no - 1]["done"]
                 save_tasks(tasks)
