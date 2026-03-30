@@ -1,12 +1,25 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
 venv/
 .env
 
-# Runtime data
-tasks.json
+# Runtime data / generated files
+*.json
+*.txt
+*.csv
+*.log
+
+# Course materials (not for GitHub)
+resources/
+assignments/
+notes/
 
 # OS
 .DS_Store
 Thumbs.db
+
+# IDE
+.vscode/
+.idea/
