@@ -7,9 +7,10 @@ venv/
 
 # Runtime data / generated files
 *.json
-*.txt
 *.csv
 *.log
+
+tasks.txt
 
 # Course materials (not for GitHub)
 resources/
