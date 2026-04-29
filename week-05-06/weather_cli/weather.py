@@ -45,6 +45,8 @@ if response is None:
     pass
 elif response.status_code == 404:
     print(f"\n❌ City '{city}' not found. Check the spelling and try again.\n")
+elif response.status_code == 500:
+    print("\n❌ Weather service is down. Try again later.\n")    
 elif response.status_code != 200:
     print(f"\n❌ Unexpected error. Status code: {response.status_code}\n")     
 else:
