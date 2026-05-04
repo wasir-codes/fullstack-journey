@@ -13,3 +13,5 @@ Solving consistently as part of my full stack development journey.
 | 344 | Reverse String | Easy | Array, Two Pointer | Two pointer O(n) |
 | 412 | Fizz Buzz | Easy | Array | Loop O(n) |
 | 704 | Binary Search | Easy | Binary Search | Binary search O(log n) |
+
+**Total solved: 9 / 240+ target**
