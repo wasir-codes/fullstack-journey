@@ -66,6 +66,3 @@ CREATE TABLE payments (
     payment_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 )
-
-SELECT table_name FROM information_schema.tables 
-WHERE table_schema = 'public';
